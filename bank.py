@@ -1,6 +1,6 @@
 import logging
 import re
-from os import path
+
 
 import yaml
 from selenium import webdriver
@@ -57,8 +57,7 @@ class Bank:
         self.balance = self._get_balance()
 
     def _load_login_data(self) -> None:
-        path_to_file = path.join(path.dirname(__file__), "data.yaml")
-        with open(path_to_file, "r", encoding="utf8") as f:
+        with open("data.yaml", "r", encoding="utf8") as f:
             login_info = yaml.load(f, Loader=yaml.FullLoader)
             self._USERNAME = login_info["username"]
             self._PASSWORD = login_info["password"]
