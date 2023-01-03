@@ -163,9 +163,7 @@ class Bank:
         if len(err_msg) > 0:
             raise ValueError("The input data is wrong: %s" % ", ".join(err_msg))
 
-    def _execute_tpago(
-        self, bank_code: str, ci: str, phone: str, amount: str
-    ) -> int | str:
+    def _execute_tpago(self, bank_code: str, ci: str, phone: str, amount: str) -> str:
         logger.debug("Executing tpago transaction.")
         self._driver.get(self._BASE_URL + "tpago")
         self._wait.until_not(self._OVERLAY_VISIBILITY_EC)
