@@ -114,7 +114,7 @@ class Bank:
         logger.info(f"Balance obtained. Current balance is Bs. {balance}.")
         return float(balance)
 
-    def tpago(self, bank_code: str, ci: str, phone: str, amount: str) -> int | str:
+    def tpago(self, bank_code: str, ci: str, phone: str, amount: str) -> str:
         logger.debug("Initiating a tpago transaction.")
 
         arguments = [bank_code, ci, phone, amount]
