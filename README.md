@@ -1,5 +1,9 @@
 # Mercantil automation
 
-## Requisites
+Module for automating banking transactions such as account balance consulting and money transfers (currently only balance consulting) using selenium.
 
-- A data.yaml file that contains login info as username, password and security questions. The file location must be at the root of the main script
+## Requirements
+
+- The login-info.yaml file stores the login credentials to access the bank portal.
+
+You can take a look at the example files login-data.
