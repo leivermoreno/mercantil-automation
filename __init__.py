@@ -1,3 +1,3 @@
-from _bank import Bank
+from ._bank import Bank
 
 __all__ = ["Bank"]
