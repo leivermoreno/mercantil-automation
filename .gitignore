@@ -2,3 +2,4 @@ __pycache__/
 .vscode/
 .pylintrc
 data.yaml
+login-info.yaml
