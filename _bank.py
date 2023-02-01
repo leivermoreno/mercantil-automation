@@ -49,6 +49,11 @@ class Bank:
         self._login()
         self._get_balance()
 
+    def close(self) -> None:
+        """Releases resources. Mus be called a the end"""
+
+        self._driver.quit()
+
     def _login(self) -> None:
         self._driver.get(LOGIN_URL)
         self._wait.until_not(OVERLAY_VISIBILITY_EC)
